@@ -1,0 +1,725 @@
+/* styles.css */
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+header .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header .menu li {
+    display: inline;
+}
+
+header .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+header .menu a:hover, header .menu .btn {
+    background: #f04c4c;
+    color: #fff;
+}
+
+.hero {
+    background: url('images/golovnaFON.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 200px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.hero p {
+    margin: 0 0 20px;
+    font-size: 1.2em;
+}
+
+.hero .btn-primary {
+    background: #f04c4c;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.hero .btn-primary:hover {
+    background: #e03b3b;
+}
+
+.courses, .reviews {
+    color: #ffffd7;
+    padding: 20px 20px 0px 0px;
+    background: #27272b;
+    text-align: center;
+}
+
+.courses h3, .reviews h3 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.courses h4, .reviews h4 {
+   color: #27272b;
+}
+
+.course-item h3{
+    color: #27272b;
+}
+
+.stil {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Для вертикального вирівнювання тексту */
+    justify-content: center;
+    align-items: center; /* Вирівнювання по центру */
+    text-align: center;
+    background: url('images/stil.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: #f5f5f5;
+    z-index: 0; /* Рівень секції */
+}
+
+.stil::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний шар */
+    z-index: -1; /* Прозорий фон під текстом */
+}
+
+.stil h2,
+.stil p {
+    position: relative; /* Встановлюємо тексту вищий рівень */
+    z-index: 1; /* Вміст над напівпрозорим фоном */
+}
+
+.stil h2 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.stil p {
+    margin: 0 0 20px;
+    font-size: 1.2em;
+}
+
+
+.course-list {
+    padding: 60px;
+    display: flex;
+    background: #f3e5ab;
+    justify-content: center;
+}
+
+.course-item {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* styles.css */
+
+/* Збережіть попередні стилі */
+
+/* Стилі для сторінки курсів */
+.courses-page {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.courses-page h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 280px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+}
+
+.course-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.course-item h4 {
+    margin: 15px 0 10px;
+    font-size: 1.2em;
+}
+
+.course-item p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.btn-course {
+    background: #f04c4c;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn-course:hover {
+    background: #e03b3b;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #ccc; /* Сірий фон */
+    color: #333; /* Текст темного кольору */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Заокруглення кнопки */
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid #bbb; /* Додаткова рамка */
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background: #bbb; /* Трохи темніший сірий на наведенні */
+    color: #000; /* Темніший текст */
+    border-color: #aaa; /* Темніша рамка */
+}
+
+
+
+/* Активне посилання в меню */
+.menu .active {
+    background: #f04c4c;
+    color: #fff;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .course-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-item {
+        width: 100%;
+    }
+}
+
+
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.modal-content {
+    background: url('images/bassis.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+    margin: 8% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    height: 60%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative; /* Додаємо для позиціонування хрестика всередині модального вікна */
+    overflow: hidden; /* Забезпечує коректне відображення затемнення */
+}
+
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Напівпрозорий чорний шар */
+    z-index: 1; /* Забезпечує затемнення фону над зображенням */
+}
+
+.modal-content h3, 
+.modal-content p {
+    position: relative; /* Зміщує текст поверх затемнення */
+    z-index: 2; /* Текст завжди знаходиться вище затемнення */
+    color: #fff; /* Для чіткості тексту на затемненому фоні */
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px; /* Розташування хрестика від правого краю модального вікна */
+    color: #c9b9ae;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3; /* Хрестик також вище затемнення */
+}
+
+.modal .close:hover {
+    color: #f04c4c;
+}
+
+
+
+
+/* auth.html*/
+.auth {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.auth-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.auth-form {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 1em;
+    color: #555;
+}
+
+.auth-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.auth-form .btn-primary {
+    display: inline-block;
+    background: #f04c4c;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-form .btn-primary:hover {
+    background: #e03b3b;
+}
+
+.auth-form .recover {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #f04c4c;
+}
+
+.auth-form .recover:hover {
+    text-decoration: underline;
+}
+
+/* profile.html */
+.profile {
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+}
+
+.profile-info h2 {
+    font-size: 2em;
+    margin: 0 0 10px;
+}
+
+.profile-info p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.profile-progress {
+    margin-bottom: 30px;
+}
+
+.profile-progress h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.profile-progress ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-progress li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #f04c4c;
+    border-radius: 5px;
+}
+
+.profile-edit h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.profile-edit label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #555;
+}
+
+.profile-edit input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.profile-edit .btn-primary {
+    background: #f04c4c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.profile-edit .btn-primary:hover {
+    background: #e03b3b;
+}
+
+
+
+/*course-details*/
+.course-details {
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.course-details h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.course-info {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.course-info ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.course-info a {
+    color: #f04c4c;
+    text-decoration: none;
+}
+
+.course-info a:hover {
+    text-decoration: underline;
+}
+
+.course-action {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.course-action p {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.course-action .btn-primary {
+    background: #f04c4c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-action .btn-primary:hover {
+    background: #e03b3b;
+}
+
+
+
+.modal .modal-action {
+    margin-top: auto; /* Автоматичний відступ для переміщення донизу */
+    text-align: center;
+    position: absolute; /* Абсолютне позиціонування */
+    bottom: 80px; /* Відступ від нижнього краю */
+    left: 50%; /* Вирівнювання по центру */
+    transform: translateX(-50%); /* Центрування по горизонталі */
+    z-index: 2; /* Вище затемнення */
+}
+
+.modal .modal-action .btnn-primary {
+    background: #f04c4c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+    z-index: 3; /* Вище затемнення */
+}
+
+.modal .modal-action .btnn-primary:hover {
+    background: #e03b3b;
+}
+
+
+.course-item img {
+    width: 100%; /* Зображення заповнює всю ширину контейнера */
+    height: auto; /* Автоматично підтримується пропорція */
+    max-width: 300px; /* Максимальна ширина зображення */
+    max-height: 140px; /* Максимальна висота зображення */
+    object-fit: cover; /* Зображення обрізається відповідно до пропорцій */
+    border-radius: 5px; /* Додаємо заокруглені кути */
+}
+
+/* Секція "Про нас" */
+.chef {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Для вертикального вирівнювання тексту */
+    justify-content: center;
+    align-items: center; /* Вирівнювання по центру */
+    text-align: center;
+    background: url('images/chef.jpeg') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: #f5f5f5;
+    z-index: 0; /* Рівень секції */
+}
+
+.chef::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний шар */
+    z-index: -1; /* Прозорий фон під текстом */
+}
+
+.chef h2,
+.chef p {
+    position: relative; /* Встановлюємо тексту вищий рівень */
+    z-index: 1; /* Вміст над напівпрозорим фоном */
+}
+
+.chef h2 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.chef p {
+    margin: 0 0 20px;
+    font-size: 1.2em;
+}
+
+
+.about, .team {
+    padding: 50px 20px;
+    background: #f3e5ab;
+    text-align: center;
+}
+
+.about h3, .team h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-content, .about-vision {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.about-content p, .about-vision p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+
+
+
+.team {
+    position: relative;
+    color: #f9f7f6;
+    padding: 50px 20px;
+    background: #f9f7f6;
+    text-align: center;
+    background: url('images/kuhari.jpeg') no-repeat center center/cover;
+    z-index: 0;
+}
+
+
+.team::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Напівпрозорий чорний шар */
+    z-index: -1; /* Прозорий фон під текстом */
+}
+
+.team p{
+    margin: 0 0 20px;
+    font-size: 1.2em;
+    position: relative; /* Встановлюємо тексту вищий рівень */
+    z-index: 1; /* Вміст над напівпрозорим фоном */
+}
+
+.team h3{
+    color: #f9f7f6;
+}

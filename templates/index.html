@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-курси кулінарії</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Кулінарна Академія Онлайн</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="courses.html">Курси</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                    <li><a href="auth.html" class="btn">Увійти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Навчайтесь кулінарії онлайн</h2>
+            <p>Освойте нові рецепти, техніки та секрети від найкращих шеф-кухарів.</p>
+            <a href="courses.html" class="btn-primary">Переглянути курси</a>
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <div class="container">
+            <h3>Популярні курси</h3>
+            <div class="course-list">
+                <div class="course-item">
+                    <img src="/static/images/basic.jpg" alt="Курс 1">
+                    <h4>Основи кулінарії</h4>
+                    <p>Для початківців</p>
+                    <button class="btn-primary" onclick="openModal('course1')">Детальніше</button>
+                </div>
+                <div class="course-item">
+                    <img src="/static/images/conditer2.jpg" alt="Курс 2">
+                    <h4>Професійне кондитерство</h4>
+                    <p>Солодкі шедеври</p>
+                    <button class="btn-primary" onclick="openModal('course2')">Детальніше</button>
+                </div>
+                <div class="course-item">
+                    <img src="/static/images/vegan.jpg" alt="Курс 3">
+                    <h4>Секрети здорового харчування</h4>
+                    <p>Збалансоване меню</p>
+                    <button class="btn-primary" onclick="openModal('course3')">Детальніше</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h3>Відгуки студентів</h3>
+            <p>"Це найкращі онлайн-курси, які я проходив! Враження неймовірні!" - Олена</p>
+            <p>"Дякую за ваші уроки. Тепер я готую як справжній шеф!" - Ігор</p>
+        </div>
+    </section>
+
+  <!-- Модальне вікно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <div class="modal-action">
+            <button class="btnn-primary" onclick="enrollCourse()">Записатись на курс</button>
+        </div>
+    </div>
+</div>
+<script>
+        // Дані про курси
+        
+        const courseData = {
+            course1: {
+                title: 'Основи кулінарії',
+                description: 'Цей курс призначений для тих, хто тільки починає свою подорож у світі кулінарії. Ви дізнаєтеся про базові техніки приготування їжі, правильний вибір інгредієнтів та основи подачі страв. Разом ми створимо ваші перші кулінарні шедеври!'
+            },
+            course2: {
+                title: 'Професійне кондитерство',
+                description: 'Курс для тих, хто хоче опанувати мистецтво створення вишуканих десертів. Ви навчитеся готувати торти, тістечка, муси та інші солодощі за рецептами професійних кондитерів. Відкрийте для себе солодкий світ шедеврів!'
+            },
+            course3: {
+                title: 'Секрети здорового харчування',
+                description: 'Дізнайтеся, як готувати корисні страви, що підтримуватимуть ваше здоров`я та енергію. Ми навчимо вас створювати збалансоване меню, насичене вітамінами, мінералами та смаком. Готуйте здорово – живіть активно!.'
+            },
+            course4: {
+                title: 'Італійська кухня',
+                description: 'Пориньте у світ автентичної італійської кухні! Ви навчитеся готувати пасту, піцу, ризотто та інші класичні італійські страви, дотримуючись традиційних рецептів. Спробуйте справжній смак Італії у своїй тарілці.'
+            },
+            course5: {
+                title: 'Вегетаріанські страви',
+                description: 'Навчіться готувати вишукані та поживні страви без використання м`яса. Курс ідеально підійде для вегетаріанців і тих, хто прагне урізноманітнити свій раціон. Корисна їжа ще ніколи не була такою смачною!'
+            },
+            course6: {
+                title: 'Молекулярна кухня',
+                description: 'ДВідкрийте для себе інноваційний підхід до приготування їжі. Ми розкриємо секрети молекулярної гастрономії, навчимо використовувати техніки сферифікації, емульсифікації та інших сучасних методів. Перетворіть готування на справжнє мистецтво!'
+            }
+        };
+
+        // Функція відкриття модального вікна
+        function openModal(courseId) {
+            const course = courseData[courseId];
+            document.getElementById('modal-title').textContent = course.title;
+            document.getElementById('modal-description').textContent = course.description;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        // Функція закриття модального вікна
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+    <footer id="contact">
+        <div class="container">
+            <p>© 2024 Кулінарна Академія Онлайн. Всі права захищені.</p>
+            <p>Контакти: info@cookingacademy.com | +380 123 456 789</p>
+        </div>
+    </footer>
+</body>
+</html>

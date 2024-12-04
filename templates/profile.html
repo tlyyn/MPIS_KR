@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профіль користувача</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Кулінарна Академія Онлайн</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="courses.html">Курси</a></li>
+                    <li><a href="/profile" class="active">Профіль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="profile">
+        <div class="container">
+            <div class="profile-header">
+                <img src="images/user-placeholder.jpg" alt="Фото користувача" class="profile-photo">
+                <div class="profile-info">
+                    <h2>{{ user_name }}</h2>
+                    <p>Email: {{ user_email }}</p>
+                </div>
+            </div>
+
+            <div class="profile-progress">
+                <h3>Прогрес навчання</h3>
+                <ul>
+                    <li>Основи кулінарії: <progress value="70" max="100"></progress> 70%</li>
+                    <li>Професійне кондитерство: <progress value="40" max="100"></progress> 40%</li>
+                    <li>Здорове харчування: <progress value="90" max="100"></progress> 90%</li>
+                </ul>
+            </div>
+
+            <div class="profile-edit">
+                <h3>Редагування особистих даних</h3>
+                <form action="/update_profile" method="post">
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" value="{{ user_name }}">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="{{ user_email }}">
+
+                    <label for="password">Новий пароль:</label>
+                    <input type="password" id="password" name="password" placeholder="Змінити пароль">
+
+                    <button type="submit" class="btn-primary">Зберегти зміни</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Кулінарна Академія Онлайн. Всі права захищені.</p>
+            <p>Контакти: info@cookingacademy.com | +380 123 456 789</p>
+        </div>
+    </footer>
+</body>
+</html>

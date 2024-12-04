@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизація/Реєстрація</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Кулінарна Академія Онлайн</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="courses.html">Курси</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="auth">
+        <div class="container auth-container">
+            <div class="auth-form">
+                <h2>Авторизація</h2>
+                <form action="/login" method="post">
+                    <label for="email-login">Електронна пошта:</label>
+                    <input type="email" id="email-login" name="email" placeholder="Введіть вашу пошту" required>
+                    
+                    <label for="password-login">Пароль:</label>
+                    <input type="password" id="password-login" name="password" placeholder="Введіть ваш пароль" required>
+                    
+                    <button type="submit" class="btn-primary">Увійти</button>
+                </form>
+            </div>
+
+            <div class="auth-form">
+                <h2>Реєстрація</h2>
+                <form action="{{ url_for('register') }}" method="post">
+                    <label for="name-register">Ім'я:</label>
+                    <input type="text" id="name-register" name="name" placeholder="Ваше ім'я" required>
+                    
+                    <label for="email-register">Електронна пошта:</label>
+                    <input type="email" id="email-register" name="email" placeholder="Ваша пошта" required>
+                    
+                    <label for="password-register">Пароль:</label>
+                    <input type="password" id="password-register" name="password" placeholder="Придумайте пароль" required>
+                    
+                    <button type="submit" class="btn-primary">Зареєструватися</button>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>© 2024 Кулінарна Академія Онлайн. Всі права захищені.</p>
+            <p>Контакти: info@cookingacademy.com | +380 123 456 789</p>
+        </div>
+    </footer>
+</body>
+</html>
